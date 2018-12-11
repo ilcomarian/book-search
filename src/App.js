@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
+
 import Form from "./components/form";
 
+import cardLayout from "./components/card";
 class App extends Component {
   state = {
     items: undefined
@@ -21,6 +23,7 @@ class App extends Component {
         });
       });
   };
+
   render() {
     console.log(this.state.items);
     if (!this.state.items) {
@@ -29,16 +32,15 @@ class App extends Component {
           <Form getBook={this.getBook} />
         </div>
       );
+    } else {
+      return (
+        <div className="App">
+          <Form getBook={this.getBook} />
+
+          {this.state.items.map(element => cardLayout(element))}
+        </div>
+      );
     }
-    return (
-      <div className="App">
-        {/* <Form getBook={this.getBook} /> */}
-        { this.state.items.forEach(element => 
-        <div>element.accessInfo.accessViewStatus</div>
-      
-       }
-      </div>
-    );
   }
 }
 
