@@ -30,3 +30,22 @@
     transform: rotate(360deg);
   }
 }
+
+/* .card-img-overlay {
+  width: 200px;
+} */
+
+.img {
+  width: 200px;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box-name {
+  margin: 2%;
+}
