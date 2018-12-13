@@ -37,7 +37,6 @@ class App extends Component {
         <div className="App">
           <Form getBook={this.getBook} />
           <div className="box">
-            {" "}
             {this.state.items.map(element => cardLayout(element))}
           </div>
         </div>
